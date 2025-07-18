@@ -6,6 +6,7 @@ include_once '../controllers/PlayerController.php';
 include_once '../controllers/TrainingController.php';
 include_once '../controllers/BudgetController.php';
 include_once '../controllers/ExpenseController.php';
+include_once '../controllers/StrategyController.php';
 
 $request_uri = $_SERVER['REQUEST_URI'];
 $request_method = $_SERVER['REQUEST_METHOD'];
@@ -14,6 +15,7 @@ $playerController = new PlayerController();
 $trainingController = new TrainingController();
 $budgetController = new BudgetController();
 $expenseController = new ExpenseController();
+$strategyController = new StrategyController();
 
 if ($request_uri === '/api/players' && $request_method === 'GET') {
     $playerController->read();
@@ -39,6 +41,14 @@ if ($request_uri === '/api/players' && $request_method === 'GET') {
     $expenseController->read();
 } else if ($request_uri === '/api/expenses' && $request_method === 'POST') {
     $expenseController->create();
+} else if ($request_uri === '/api/strategies' && $request_method === 'GET') {
+    $strategyController->read();
+} else if ($request_uri === '/api/strategies' && $request_method === 'POST') {
+    $strategyController->create();
+} else if ($request_uri === '/api/strategies' && $request_method === 'PUT') {
+    $strategyController->update();
+} else if ($request_uri === '/api/strategies' && $request_method === 'DELETE') {
+    $strategyController->delete();
 } else {
     http_response_code(404);
     echo json_encode(array('message' => 'Route not found'));

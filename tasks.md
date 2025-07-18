@@ -69,3 +69,15 @@
     *   This page will have a dashboard to display budget information and a form to add expenses.
 - [x] **Create `budget.js` for Frontend Logic:**
     *   This script will handle fetching budget and expense data, rendering the dashboard, and managing user interactions.
+- [x] **Create Strategies Table in Database:**
+    *   I will provide the SQL command to create the `strategies` table.
+- [x] **Create `Strategy.php` Model:**
+    *   This class will represent a game strategy and will have methods to interact with the `strategies` table.
+- [x] **Create `StrategyController.php`:**
+    *   This controller will handle API requests related to strategies.
+- [x] **Update `api.php` with Strategy Routes:**
+    *   I will add new routes to handle CRUD operations for strategies.
+- [x] **Create `strategy.html` Page:**
+    *   This page will allow users to create, view, update, and delete game strategies.
+- [x] **Create `strategy.js` for Frontend Logic:**
+    *   This script will handle the frontend logic for the strategy board.

@@ -16,9 +16,21 @@ The goal is to build a comprehensive basketball team management application. Thi
 -   **`Expense`:** Represents a single expense with properties like `id`, `description`, `amount`, and `date`.
 -   **`Strategy`:** Represents a game strategy with properties like `id`, `name`, `description`, and `assigned_players`.
 
-### Pages to Create
+### Progress Update
 
-1.  **Player Management Page:** A page to view, create, update, and delete players. This is the page I am currently working on.
-2.  **Training Schedule Page:** A page to schedule and manage training sessions for players.
-3.  **Budget Management Page:** A page to track the team's budget and expenses.
-4.  **Strategy Board Page:** A page to define and visualize game strategies.
+I have successfully implemented the following modules:
+
+-   **Player Management:** Full CRUD functionality for managing players.
+-   **Training Schedule:** A calendar-based system for scheduling and viewing training sessions.
+-   **Budget Management:** A dashboard for tracking the team's budget and expenses.
+
+### Next Steps
+
+The final module to implement is the **Strategy Board**. This will involve:
+
+1.  **Creating a `strategies` table in the database.**
+2.  **Creating a `Strategy.php` model.**
+3.  **Creating a `StrategyController.php` controller.**
+4.  **Adding strategy routes to `api.php`.**
+5.  **Creating a `strategy.html` page to define and visualize game strategies.**
+6.  **Creating a `strategy.js` script for the frontend logic.**

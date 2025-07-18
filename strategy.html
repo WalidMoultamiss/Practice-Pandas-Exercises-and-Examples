@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Board</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <h1>Strategy Board</h1>
+
+    <form id="strategy-form">
+        <input type="hidden" id="strategy-id">
+        <input type="text" id="name" placeholder="Strategy Name" required>
+        <textarea id="description" placeholder="Description" required></textarea>
+        <textarea id="assigned_players" placeholder="Assigned Players (comma-separated)" required></textarea>
+        <button type="submit">Save Strategy</button>
+    </form>
+
+    <ul id="strategy-list"></ul>
+
+    <script src="scripts/strategy.js"></script>
+</body>
+</html>

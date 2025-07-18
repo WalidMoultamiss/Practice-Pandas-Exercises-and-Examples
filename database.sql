@@ -30,3 +30,10 @@ CREATE TABLE expenses (
     amount DECIMAL(10, 2) NOT NULL,
     date DATE NOT NULL
 );
+
+CREATE TABLE strategies (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    assigned_players TEXT NOT NULL
+);
