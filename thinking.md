@@ -1,0 +1,1 @@
+I will start by creating the `thinking.md` file. This will be a place for me to jot down my thoughts as I work on this project. This will help me to keep track of my ideas and to go back and see what I was thinking about at different stages of the project.

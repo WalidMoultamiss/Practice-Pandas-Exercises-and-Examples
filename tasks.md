@@ -1,0 +1,11 @@
+- [x] Create a `thinking.md` file.
+- [x] Create a `tasks.md` file.
+- [x] Create a `index.html` file.
+- [x] Create a `styles` folder.
+- [x] Create a `styles/main.css` file.
+- [x] Create a `scripts` folder.
+- [x] Create a `scripts/main.js` file.
+- [x] Link the CSS and JavaScript files to the `index.html` file.
+- [x] Add content to the `index.html` file.
+- [x] Add styles to the `styles/main.css` file.
+- [x] Add scripts to the `scripts/main.js` file.
