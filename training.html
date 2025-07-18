@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Schedule</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css">
+</head>
+<body>
+    <h1>Training Schedule</h1>
+
+    <div id="calendar"></div>
+
+    <div id="training-modal" style="display:none;">
+        <form id="training-form">
+            <input type="hidden" id="training-id">
+            <label for="type">Type:</label>
+            <input type="text" id="type" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <label for="players">Players:</label>
+            <textarea id="players" required></textarea>
+            <button type="submit">Save</button>
+            <button type="button" onclick="closeModal()">Cancel</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="scripts/training.js"></script>
+</body>
+</html>

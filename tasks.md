@@ -45,3 +45,15 @@
 - [x] **Refine JavaScript for Better UX:**
   *   I will update `scripts/main.js` to provide better feedback to the user, such as displaying confirmation messages after creating, updating, or deleting a player.
   *   I will also add error handling to inform the user if an API request fails.
+- [x] **Create Training Table in Database:**
+    *   I will provide the SQL command to create the `training_sessions` table.
+- [x] **Create `Training.php` Model:**
+    *   This class will represent a training session and will have methods to interact with the `training_sessions` table (`create`, `read`, `update`, `delete`).
+- [x] **Create `TrainingController.php`:**
+    *   This controller will handle API requests related to training sessions.
+- [x] **Update `api.php` with Training Routes:**
+    *   I will add new routes to handle CRUD operations for training sessions.
+- [x] **Create `training.html` Page:**
+    *   This page will have a calendar interface for scheduling and viewing training sessions.
+- [x] **Create `training.js` for Frontend Logic:**
+    *   This script will handle fetching training data, rendering the calendar, and managing user interactions for creating, updating, and deleting training sessions.

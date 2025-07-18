@@ -10,3 +10,10 @@ CREATE TABLE players (
     health VARCHAR(255) NOT NULL,
     injuries VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE training_sessions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    type VARCHAR(255) NOT NULL,
+    date DATE NOT NULL,
+    players_involved TEXT NOT NULL
+);
