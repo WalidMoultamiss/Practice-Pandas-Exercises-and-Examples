@@ -9,3 +9,14 @@
 - [x] Add content to the `index.html` file.
 - [x] Add styles to the `styles/main.css` file.
 - [x] Add scripts to the `scripts/main.js` file.
+- [x] Create a `php` folder.
+- [x] Create a `config` folder inside the `php` folder.
+- [x] Create a `database.php` file inside the `config` folder.
+- [x] Create a `models` folder inside the `php` folder.
+- [x] Create a `Player.php` file inside the `models` folder.
+- [x] Create a `controllers` folder inside the `php` folder.
+- [x] Create a `PlayerController.php` file inside the `controllers` folder.
+- [x] Create a `routes` folder inside the `php` folder.
+- [x] Create a `api.php` file inside the `routes` folder.
+- [x] Create a `.htaccess` file in the root folder.
+- [x] Create a `index.php` file in the root folder.
