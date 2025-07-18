@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Management</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <h1>Budget Management</h1>
+
+    <div id="budget-summary">
+        <h2>Budget Summary</h2>
+        <p>Total Budget: <span id="total-budget"></span></p>
+        <p>Remaining Budget: <span id="remaining-budget"></span></p>
+    </div>
+
+    <form id="expense-form">
+        <h2>Add Expense</h2>
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="number" id="amount" placeholder="Amount" required>
+        <input type="date" id="date" required>
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <div id="expense-list">
+        <h2>Expense List</h2>
+        <ul></ul>
+    </div>
+
+    <script src="scripts/budget.js"></script>
+</body>
+</html>

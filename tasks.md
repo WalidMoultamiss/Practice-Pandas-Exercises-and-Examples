@@ -57,3 +57,15 @@
     *   This page will have a calendar interface for scheduling and viewing training sessions.
 - [x] **Create `training.js` for Frontend Logic:**
     *   This script will handle fetching training data, rendering the calendar, and managing user interactions for creating, updating, and deleting training sessions.
+- [x] **Create Budget and Expenses Tables in Database:**
+    *   I will provide the SQL commands to create the `budgets` and `expenses` tables.
+- [x] **Create `Budget.php` and `Expense.php` Models:**
+    *   These classes will represent budgets and expenses and will have methods to interact with their respective tables.
+- [x] **Create `BudgetController.php` and `ExpenseController.php`:**
+    *   These controllers will handle API requests related to budgets and expenses.
+- [x] **Update `api.php` with Budget and Expense Routes:**
+    *   I will add new routes to handle CRUD operations for budgets and expenses.
+- [x] **Create `budget.html` Page:**
+    *   This page will have a dashboard to display budget information and a form to add expenses.
+- [x] **Create `budget.js` for Frontend Logic:**
+    *   This script will handle fetching budget and expense data, rendering the dashboard, and managing user interactions.

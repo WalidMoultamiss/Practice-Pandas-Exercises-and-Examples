@@ -17,3 +17,16 @@ CREATE TABLE training_sessions (
     date DATE NOT NULL,
     players_involved TEXT NOT NULL
 );
+
+CREATE TABLE budgets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    current_amount DECIMAL(10, 2) NOT NULL
+);
+
+CREATE TABLE expenses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    description VARCHAR(255) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    date DATE NOT NULL
+);
