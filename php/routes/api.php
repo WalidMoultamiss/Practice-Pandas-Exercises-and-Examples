@@ -11,6 +11,12 @@ $playerController = new PlayerController();
 
 if ($request_uri === '/api/players' && $request_method === 'GET') {
     $playerController->read();
+} else if ($request_uri === '/api/players' && $request_method === 'POST') {
+    $playerController->create();
+} else if ($request_uri === '/api/players' && $request_method === 'PUT') {
+    $playerController->update();
+} else if ($request_uri === '/api/players' && $request_method === 'DELETE') {
+    $playerController->delete();
 } else {
     http_response_code(404);
     echo json_encode(array('message' => 'Route not found'));

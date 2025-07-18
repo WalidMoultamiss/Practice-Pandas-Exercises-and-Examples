@@ -20,3 +20,20 @@
 - [x] Create a `api.php` file inside the `routes` folder.
 - [x] Create a `.htaccess` file in the root folder.
 - [x] Create a `index.php` file in the root folder.
+- [x] **Update `Player.php` Model:**
+  - Add methods for creating, updating, and deleting players (`create`, `update`, `delete`).
+  - These methods will handle the SQL queries for each operation.
+- [x] **Update `PlayerController.php`:**
+  - Implement `create`, `update`, and `delete` methods to handle incoming API requests.
+  - These methods will use the `Player` model to interact with the database.
+  - They will also handle request data and send back appropriate JSON responses.
+- [x] **Update `api.php` Routes:**
+  - Add routes for `POST`, `PUT`, and `DELETE` requests to handle creating, updating, and deleting players.
+  - These routes will map the requests to the corresponding methods in the `PlayerController`.
+- [x] **Update `main.js` for Frontend Interaction:**
+  - Add a form to `index.html` for creating and updating players.
+  - Implement JavaScript functions to:
+    - Fetch and display the list of players.
+    - Handle form submission for creating and updating players.
+    - Handle player deletion.
+    - These functions will make `fetch` requests to the backend API.

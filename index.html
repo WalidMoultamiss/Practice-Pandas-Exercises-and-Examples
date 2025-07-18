@@ -8,6 +8,19 @@
 </head>
 <body>
     <h1>Basketball Team Management</h1>
+
+    <form id="player-form">
+        <input type="hidden" id="player-id">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="position" placeholder="Position" required>
+        <input type="text" id="statistics" placeholder="Statistics" required>
+        <input type="text" id="health" placeholder="Health" required>
+        <input type="text" id="injuries" placeholder="Injuries" required>
+        <button type="submit">Save Player</button>
+    </form>
+
+    <ul id="player-list"></ul>
+
     <script src="scripts/main.js"></script>
 </body>
 </html>
