@@ -11,18 +11,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const apiUrl = 'api/players';
 
     async function getPlayers() {
-        const response = await fetch(apiUrl);
-        const players = await response.json();
-        playerList.innerHTML = '';
-        players.data.forEach(player => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-                ${player.name} (${player.position})
-                <button onclick="editPlayer(${player.id}, '${player.name}', '${player.position}', '${player.statistics}', '${player.health}', '${player.injuries}')">Edit</button>
-                <button onclick="deletePlayer(${player.id})">Delete</button>
-            `;
-            playerList.appendChild(li);
-        });
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const players = await response.json();
+            playerList.innerHTML = '';
+            if (players.data) {
+                players.data.forEach(player => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <span>${player.name} (${player.position})</span>
+                        <div>
+                            <button onclick="editPlayer(${player.id}, '${player.name}', '${player.position}', '${player.statistics}', '${player.health}', '${player.injuries}')">Edit</button>
+                            <button onclick="deletePlayer(${player.id})">Delete</button>
+                        </div>
+                    `;
+                    playerList.appendChild(li);
+                });
+            }
+        } catch (error) {
+            console.error('Error fetching players:', error);
+            alert('Failed to fetch players. Please try again later.');
+        }
     }
 
     playerForm.addEventListener('submit', async (e) => {
@@ -35,23 +47,36 @@ document.addEventListener("DOMContentLoaded", () => {
         const injuries = injuriesInput.value;
         const player = { name, position, statistics, health, injuries };
 
-        if (id) {
-            player.id = id;
-            await fetch(apiUrl, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(player)
-            });
-        } else {
-            await fetch(apiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(player)
-            });
+        try {
+            let response;
+            if (id) {
+                player.id = id;
+                response = await fetch(apiUrl, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(player)
+                });
+            } else {
+                response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(player)
+                });
+            }
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const result = await response.json();
+            alert(result.message);
+            playerForm.reset();
+            playerIdInput.value = '';
+            getPlayers();
+        } catch (error) {
+            console.error('Error saving player:', error);
+            alert('Failed to save player. Please try again later.');
         }
-        playerForm.reset();
-        playerIdInput.value = '';
-        getPlayers();
     });
 
     window.editPlayer = (id, name, position, statistics, health, injuries) => {
@@ -64,12 +89,26 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.deletePlayer = async (id) => {
-        await fetch(apiUrl, {
-            method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id })
-        });
-        getPlayers();
+        if (confirm('Are you sure you want to delete this player?')) {
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const result = await response.json();
+                alert(result.message);
+                getPlayers();
+            } catch (error) {
+                console.error('Error deleting player:', error);
+                alert('Failed to delete player. Please try again later.');
+            }
+        }
     };
 
     getPlayers();
