@@ -81,3 +81,4 @@
     *   This page will allow users to create, view, update, and delete game strategies.
 - [x] **Create `strategy.js` for Frontend Logic:**
     *   This script will handle the frontend logic for the strategy board.
+- [x] **Project Complete**
